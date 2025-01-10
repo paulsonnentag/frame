@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3vyisy1s3qt8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w1cgu"]
+size = Vector2(64, 64)
+
+[node name="Tile" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_w1cgu")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+color = Color(0.588235, 0.788235, 0.427451, 1)
