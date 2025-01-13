@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d28varre16uja"]
 
-[ext_resource type="Script" path="res://behaviors/drop_target.gd" id="1_onrk7"]
+[ext_resource type="Script" path="res://dnd/drop_target.gd" id="1_onrk7"]
 
 [node name="DropTarget" type="Node2D"]
 script = ExtResource("1_onrk7")

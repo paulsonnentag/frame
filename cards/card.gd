@@ -16,6 +16,6 @@ func _process(_delta: float):
 	else:
 		scale = scale.lerp(Vector2(0.5, 0.5), 0.1)
 
-
 func _on_dropped(_target: Node2D):
-	queue_free()
+	
+	pass

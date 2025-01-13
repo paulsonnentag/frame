@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://deqsuds7jyydc" path="res://cards/assets/card.png" id="1_44rt2"]
 [ext_resource type="Script" path="res://cards/card.gd" id="1_t4qkk"]
-[ext_resource type="PackedScene" uid="uid://dk5i1hipqlpq0" path="res://behaviors/Draggable.tscn" id="2_4sr8b"]
+[ext_resource type="PackedScene" uid="uid://dk5i1hipqlpq0" path="res://dnd/Draggable.tscn" id="2_4sr8b"]
 
 [node name="Card" type="Node2D"]
 process_priority = 1

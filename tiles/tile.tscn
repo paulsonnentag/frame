@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b3vyisy1s3qt8"]
 
 [ext_resource type="Script" path="res://tiles/tile.gd" id="1_h4c2v"]
-[ext_resource type="Script" path="res://behaviors/drop_target.gd" id="1_u0n8m"]
+[ext_resource type="Script" path="res://dnd/drop_target.gd" id="1_u0n8m"]
 
 [node name="Tile" type="Node2D"]
 script = ExtResource("1_h4c2v")

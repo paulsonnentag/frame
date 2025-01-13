@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://203a0dcru8mj"]
+
+[ext_resource type="PackedScene" uid="uid://b3vyisy1s3qt8" path="res://tiles/tile.tscn" id="1_fqopm"]
+[ext_resource type="Script" path="res://game/game_tile.gd" id="2_detk0"]
+[ext_resource type="Texture2D" uid="uid://brus77wsbxywd" path="res://game/assets/trees.png" id="2_krc6f"]
+
+[node name="Tile" instance=ExtResource("1_fqopm")]
+script = ExtResource("2_detk0")
+texture = null
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="2"]
+unique_name_in_owner = true
+position = Vector2(-4.76837e-07, 7.15256e-07)
+scale = Vector2(0.318182, 0.318182)
+texture = ExtResource("2_krc6f")

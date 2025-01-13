@@ -3,10 +3,8 @@ extends Node2D
 
 static var currently_dragged: Node2D
 
-
 var is_dragging = false
 var is_hovered = false
-
 
 signal dropped(drop_target: Node2D);
 

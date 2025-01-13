@@ -18,7 +18,6 @@ func _ready() -> void:
 		push_warning("drop_handle is not defined. Please assign a Node2D to drop_handle.")
 
 func _enter_tree() -> void:
-	print("enter")
 	all_drop_targets.append(self)
 
 func _exit_tree() -> void:
