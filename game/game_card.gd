@@ -1,3 +1,4 @@
+@tool
 class_name GameCard
 extends Card
 
@@ -10,11 +11,12 @@ const GameTileScene = preload("res://game/game_tile.tscn")
 @onready var label: Label = %Label
 @onready var image_sprite: Sprite2D = %ImageSprite
 
-func _ready():
-	super._ready()
-
+func _process(delta: float):
 	label.text = text
 	image_sprite.texture = image
+
+	if !Engine.is_editor_hint():
+		super._process(delta)
 
 func _on_dropped(target: Node):
 	if not target is Tile:
