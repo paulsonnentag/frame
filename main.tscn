@@ -22,8 +22,11 @@ grow_vertical = 2
 
 [node name="TileMap" parent="CanvasLayer/Center" instance=ExtResource("1_hoqmf")]
 position = Vector2(0, -64)
+width = 10
+height = 10
 
 [node name="Bottom" type="HBoxContainer" parent="CanvasLayer"]
+z_index = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -35,14 +38,11 @@ offset_right = 20.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Card3" parent="CanvasLayer/Bottom" instance=ExtResource("2_4mjl4")]
-position = Vector2(33, -99)
+[node name="Card6" parent="CanvasLayer/Bottom" instance=ExtResource("2_4mjl4")]
+position = Vector2(148, -94)
 
-[node name="Card4" parent="CanvasLayer/Bottom" instance=ExtResource("2_4mjl4")]
-position = Vector2(229, -100)
+[node name="Card7" parent="CanvasLayer/Bottom" instance=ExtResource("2_4mjl4")]
+position = Vector2(-6, -88)
 
 [node name="Card5" parent="CanvasLayer/Bottom" instance=ExtResource("2_4mjl4")]
-position = Vector2(-184, -101)
-
-[node name="Card" parent="." instance=ExtResource("2_4mjl4")]
-position = Vector2(-140, -99)
+position = Vector2(-139, -83)
