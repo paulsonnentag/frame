@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bo7wdhbgsc1jy"]
+[gd_scene load_steps=5 format=3 uid="uid://bo7wdhbgsc1jy"]
 
 [ext_resource type="Texture2D" uid="uid://deqsuds7jyydc" path="res://assets/card.png" id="1_44rt2"]
 [ext_resource type="Script" uid="uid://ba8rml2dxnxwx" path="res://cards/card.gd" id="1_t4qkk"]
 [ext_resource type="PackedScene" uid="uid://dk5i1hipqlpq0" path="res://dnd/Draggable.tscn" id="2_4sr8b"]
+[ext_resource type="Texture2D" uid="uid://dnxic6f5xyxuw" path="res://assets/red.png" id="4_f61jr"]
 
 [node name="Card" type="Node2D"]
 process_priority = 1
@@ -17,3 +18,8 @@ drag_handle = NodePath("../FaceSprite")
 unique_name_in_owner = true
 scale = Vector2(0.225375, 0.225375)
 texture = ExtResource("1_44rt2")
+
+[node name="BackSprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+scale = Vector2(0.224437, 0.224437)
+texture = ExtResource("4_f61jr")

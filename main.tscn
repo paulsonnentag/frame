@@ -11,19 +11,23 @@
 [node name="Card" parent="." instance=ExtResource("1_ig7tw")]
 position = Vector2(250, 557)
 entity_id = "card3"
+is_revealed = false
 image = ExtResource("2_h2yge")
 
 [node name="Card2" parent="." instance=ExtResource("1_ig7tw")]
 position = Vector2(557, 706)
 entity_id = "card4"
+is_revealed = false
 image = ExtResource("3_lquwl")
 
 [node name="Card3" parent="." instance=ExtResource("1_ig7tw")]
 position = Vector2(482, 463)
 entity_id = "card2"
+is_revealed = false
 image = ExtResource("4_7mycd")
 
 [node name="Card4" parent="." instance=ExtResource("1_ig7tw")]
 position = Vector2(310, 282)
 entity_id = "card1"
+is_revealed = false
 image = ExtResource("5_272bh")
