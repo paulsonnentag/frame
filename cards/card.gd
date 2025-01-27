@@ -2,20 +2,22 @@ class_name Card
 extends Node2D
 
 @onready var draggable: Draggable = %Draggable
+@export var entity_id: String
 
-var initial_position: Vector2
+func _ready() -> void:
 
-func _ready():
-	initial_position = global_position
 	draggable.dropped.connect(_on_dropped)
 
-func _process(_delta: float):
-	if not draggable.is_dragging:
-		global_position = global_position.lerp(initial_position, 0.1)
-		scale = scale.lerp(Vector2(1, 1), 0.1)
-	else:
-		scale = scale.lerp(Vector2(0.5, 0.5), 0.1)
+
+func _process(_delta: float) -> void:
+	if !draggable.is_dragging:
+		var x = Global.state.get_state_int(entity_id, "x")
+		var y = Global.state.get_state_int(entity_id, "y")
+
+		if x != 0 || y != 0:
+			global_position = Vector2(x, y)
+
 
 func _on_dropped(_target: Node2D):
-	
-	pass
+	Global.state.set_state_int(entity_id, "x", global_position.x);
+	Global.state.set_state_int(entity_id, "y", global_position.y);

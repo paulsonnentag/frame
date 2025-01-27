@@ -38,13 +38,19 @@ func _on_drag(point: Vector2):
 
 
 func _on_drop(point: Vector2):
+  var was_dropped_on_target = false
+
   for target in DropTarget.all_drop_targets:
     target.is_dragging_over = false
 
     if target.has_point(point):
       dropped.emit(target.get_parent())
       target.dropped.emit(get_parent())
+      was_dropped_on_target = true
       break
+
+  if !was_dropped_on_target:
+    dropped.emit(null)
 
 func _process(_delta: float):
   var parent = get_parent()

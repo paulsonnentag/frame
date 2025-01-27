@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bo7wdhbgsc1jy"]
 
-[ext_resource type="Texture2D" uid="uid://deqsuds7jyydc" path="res://cards/assets/card.png" id="1_44rt2"]
-[ext_resource type="Script" path="res://cards/card.gd" id="1_t4qkk"]
+[ext_resource type="Texture2D" uid="uid://deqsuds7jyydc" path="res://assets/card.png" id="1_44rt2"]
+[ext_resource type="Script" uid="uid://ba8rml2dxnxwx" path="res://cards/card.gd" id="1_t4qkk"]
 [ext_resource type="PackedScene" uid="uid://dk5i1hipqlpq0" path="res://dnd/Draggable.tscn" id="2_4sr8b"]
 
 [node name="Card" type="Node2D"]
@@ -14,5 +14,6 @@ z_as_relative = false
 drag_handle = NodePath("../Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+unique_name_in_owner = true
 scale = Vector2(0.225375, 0.225375)
 texture = ExtResource("1_44rt2")
