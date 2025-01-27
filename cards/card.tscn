@@ -11,9 +11,9 @@ script = ExtResource("1_t4qkk")
 [node name="Draggable" parent="." node_paths=PackedStringArray("drag_handle") instance=ExtResource("2_4sr8b")]
 unique_name_in_owner = true
 z_as_relative = false
-drag_handle = NodePath("../Sprite2D")
+drag_handle = NodePath("../FaceSprite")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="FaceSprite" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 scale = Vector2(0.225375, 0.225375)
 texture = ExtResource("1_44rt2")
