@@ -18,11 +18,11 @@ extends Node2D
 			face_sprite.texture = value
 
 func _ready() -> void:
-	if Engine.is_editor_hint():
-		return
-
 	if image:
 		face_sprite.texture = image
+
+	if Engine.is_editor_hint():
+		return
 
 	draggable.dropped.connect(_on_dropped)
 	draggable.clicked.connect(_on_click)
@@ -31,10 +31,10 @@ func _on_click() -> void:
 	is_revealed = !is_revealed
 
 func _process(_delta: float) -> void:
+	back_sprite.visible = !is_revealed
+
 	if Engine.is_editor_hint():
 		return
-
-	back_sprite.visible = !is_revealed
 
 	if !draggable.is_mouse_down:
 
@@ -44,7 +44,6 @@ func _process(_delta: float) -> void:
 
 		if x != null && y != null:
 			global_position = Vector2(x, y)
-
 
 func _on_dropped(_target: Node2D):
 	Global.entity_set_state_int(entity_id, "x", int(global_position.x));

@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7baccmj133yn"]
+
+[ext_resource type="Texture2D" uid="uid://dnxic6f5xyxuw" path="res://assets/red.png" id="1_7reso"]
+[ext_resource type="Script" path="res://cards/deck.gd" id="1_sdmjd"]
+[ext_resource type="Script" path="res://dnd/draggable.gd" id="2_4xuf5"]
+
+[node name="Deck" type="Node2D"]
+script = ExtResource("1_sdmjd")
+
+[node name="BottomCard" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(1, 1.00002)
+scale = Vector2(0.224437, 0.224437)
+texture = ExtResource("1_7reso")
+
+[node name="TopCard" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+scale = Vector2(0.224437, 0.224437)
+texture = ExtResource("1_7reso")
+
+[node name="Draggable" type="Node2D" parent="TopCard" node_paths=PackedStringArray("drag_handle")]
+unique_name_in_owner = true
+script = ExtResource("2_4xuf5")
+drag_handle = NodePath("..")

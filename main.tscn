@@ -1,29 +1,21 @@
-[gd_scene load_steps=6 format=3 uid="uid://dpim420f7u1le"]
+[gd_scene load_steps=5 format=3 uid="uid://dpim420f7u1le"]
 
 [ext_resource type="PackedScene" uid="uid://bo7wdhbgsc1jy" path="res://cards/card.tscn" id="1_ig7tw"]
-[ext_resource type="Texture2D" uid="uid://dsrsihd083j2k" path="res://assets/Clubs/1c.png" id="2_h2yge"]
-[ext_resource type="Texture2D" uid="uid://v0q0ejl5bdli" path="res://assets/Clubs/11c.png" id="3_lquwl"]
-[ext_resource type="Texture2D" uid="uid://yfv4ik18yfdp" path="res://assets/Clubs/12c.png" id="4_7mycd"]
+[ext_resource type="PackedScene" uid="uid://c7baccmj133yn" path="res://cards/deck.tscn" id="1_ybtkh"]
+[ext_resource type="Texture2D" uid="uid://cqg7ifmjkxq5a" path="res://assets/Clubs/3c.png" id="4_ebe8f"]
 [ext_resource type="Texture2D" uid="uid://bg0egspha2s2t" path="res://assets/Clubs/13c.png" id="5_272bh"]
 
 [node name="Main" type="Node2D"]
 
-[node name="Card" parent="." instance=ExtResource("1_ig7tw")]
-position = Vector2(250, 557)
-entity_id = "card3"
-image = ExtResource("2_h2yge")
+[node name="Deck" parent="." instance=ExtResource("1_ybtkh")]
+position = Vector2(250, 447)
 
-[node name="Card2" parent="." instance=ExtResource("1_ig7tw")]
-position = Vector2(557, 706)
-entity_id = "card4"
-image = ExtResource("3_lquwl")
-
-[node name="Card3" parent="." instance=ExtResource("1_ig7tw")]
-position = Vector2(482, 463)
-entity_id = "card2"
-image = ExtResource("4_7mycd")
-
-[node name="Card4" parent="." instance=ExtResource("1_ig7tw")]
-position = Vector2(310, 282)
-entity_id = "card1"
+[node name="Card" parent="Deck" instance=ExtResource("1_ig7tw")]
+position = Vector2(-2, 175)
+is_revealed = true
 image = ExtResource("5_272bh")
+
+[node name="Card2" parent="Deck" instance=ExtResource("1_ig7tw")]
+position = Vector2(11, 339)
+is_revealed = true
+image = ExtResource("4_ebe8f")
