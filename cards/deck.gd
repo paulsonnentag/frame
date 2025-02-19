@@ -15,7 +15,6 @@ func _ready() -> void:
 	print("deck ready")
 	draggable.dropped.connect(_on_dropped)
 
-
 	for child in get_children():
 		if child is Card:
 			# remove card from parent
@@ -24,14 +23,13 @@ func _ready() -> void:
 			# add card to possible_cards
 			possible_cards.append(child)
 
-
 func _on_dropped(_target: Node2D):
 	
 	var random_card: Card = possible_cards[random.randi() % possible_cards.size()]
 
 	var card_instance = random_card.duplicate()
 
-	card_instance.visible = reveal_card_on_draw
+	card_instance.is_revealed = reveal_card_on_draw
 	get_tree().root.add_child(card_instance)
 
 	card_instance.entity_id = "card_" + get_uuid()
