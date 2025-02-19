@@ -37,13 +37,15 @@ func _process(_delta: float) -> void:
 	back_sprite.visible = !is_revealed
 
 	if !draggable.is_mouse_down:
-		var x = Global.state.get_state_int(entity_id, "x")
-		var y = Global.state.get_state_int(entity_id, "y")
 
-		if x != 0 || y != 0:
+		var x = Global.entity_get_state_int(entity_id, "x")
+		var y = Global.entity_get_state_int(entity_id, "y")
+
+
+		if x != null && y != null:
 			global_position = Vector2(x, y)
 
 
 func _on_dropped(_target: Node2D):
-	Global.state.set_state_int(entity_id, "x", global_position.x);
-	Global.state.set_state_int(entity_id, "y", global_position.y);
+	Global.entity_set_state_int(entity_id, "x", int(global_position.x));
+	Global.entity_set_state_int(entity_id, "y", int(global_position.y));
