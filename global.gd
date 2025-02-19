@@ -17,14 +17,14 @@ func _ready():
 	print("SHARED STATE DOC ID: ", _godot_project.get_doc_id())
 
 
-func entity_set_state_int(entity_id: String, key: String, value: int) -> void:
+func entity_set_state(entity_id: String, key: String, value: int) -> void:
 	if _godot_project == null:
 		return
 
-	_godot_project.set_state_int(entity_id, key, value)
+	_godot_project.set_entity_state(entity_id, key, value)
 
-func entity_get_state_int(entity_id, key: String) -> Variant:
+func entity_get_state(entity_id, key: String) -> Variant:
 	if _godot_project == null:
 		return null
 
-	return _godot_project.get_state_int(entity_id, key)
+	return _godot_project.get_entity_state(entity_id, key)

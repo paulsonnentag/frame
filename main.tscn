@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dpim420f7u1le"]
+[gd_scene load_steps=6 format=3 uid="uid://dpim420f7u1le"]
 
 [ext_resource type="PackedScene" uid="uid://bo7wdhbgsc1jy" path="res://cards/card.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://c7baccmj133yn" path="res://cards/deck.tscn" id="1_ybtkh"]
 [ext_resource type="Texture2D" uid="uid://d3nlbc52sjvlm" path="res://assets/Clubs/6c.png" id="3_vw6iy"]
-[ext_resource type="Texture2D" uid="uid://cqg7ifmjkxq5a" path="res://assets/Clubs/3c.png" id="4_ebe8f"]
+[ext_resource type="Texture2D" uid="uid://cibeuqpybuyuh" path="res://assets/Hearts/11h.png" id="4_jfbg8"]
+[ext_resource type="Texture2D" uid="uid://vedgi5u7oc4g" path="res://assets/Diamonds/7d.png" id="5_tje20"]
 
 [node name="Main" type="Node2D"]
 
@@ -19,4 +20,9 @@ image = ExtResource("3_vw6iy")
 [node name="Card2" parent="Deck" instance=ExtResource("1_ig7tw")]
 position = Vector2(11, 339)
 is_revealed = true
-image = ExtResource("4_ebe8f")
+image = ExtResource("4_jfbg8")
+
+[node name="Card3" parent="Deck" instance=ExtResource("1_ig7tw")]
+position = Vector2(14, 535)
+is_revealed = true
+image = ExtResource("5_tje20")
