@@ -38,13 +38,16 @@ func _process(_delta: float) -> void:
 
 	if !draggable.is_mouse_down:
 
-		var x = Global.entity_get_state(entity_id, "x")
-		var y = Global.entity_get_state(entity_id, "y")
+		var x = Global.get_entity_state(entity_id, "x")
+		var y = Global.get_entity_state(entity_id, "y")
 
 
 		if x != null && y != null:
 			global_position = Vector2(x, y)
 
 func _on_dropped(_target: Node2D):
-	Global.entity_set_state(entity_id, "x", int(global_position.x));
-	Global.entity_set_state(entity_id, "y", int(global_position.y));
+	persist_position()
+
+func persist_position() -> void:
+	Global.set_entity_state(entity_id, "x", int(global_position.x));
+	Global.set_entity_state(entity_id, "y", int(global_position.y));

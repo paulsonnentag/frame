@@ -10,7 +10,6 @@
 
 [node name="Deck" parent="." instance=ExtResource("1_ybtkh")]
 position = Vector2(250, 447)
-reveal_card_on_draw = false
 
 [node name="Card" parent="Deck" instance=ExtResource("1_ig7tw")]
 position = Vector2(-2, 175)
