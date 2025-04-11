@@ -29,6 +29,7 @@ func _ready() -> void:
 	draggable.clicked.connect(_on_click)
 
 func _on_click() -> void:
+	print("clicked")
 	is_revealed = !is_revealed
 
 func _process(_delta: float) -> void:
@@ -38,7 +39,6 @@ func _process(_delta: float) -> void:
 		return
 
 	if !draggable.is_mouse_down:
-
 		var x = Global.get_entity_state(entity_id, "x")
 		var y = Global.get_entity_state(entity_id, "y")
 

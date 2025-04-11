@@ -8,6 +8,13 @@
 script = ExtResource("1_sdmjd")
 metadata/patchwork_id = "d2c69105c3b04b289cb748902715bc5b"
 
+[node name="PanelContainer" type="PanelContainer" parent="."]
+offset_left = -64.0
+offset_top = -90.0
+offset_right = 66.0
+offset_bottom = 92.0
+metadata/patchwork_id = "eb62e0d85004425b8fdd1d934bedd098"
+
 [node name="BottomCard" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(1, 1.00002)

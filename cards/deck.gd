@@ -6,6 +6,7 @@ extends Node2D
 @onready var bottom_card: Sprite2D = %BottomCard
 
 @export var reveal_card_on_draw: bool = true
+@export var deck_id: String
 
 var random = RandomNumberGenerator.new()
 
@@ -27,10 +28,11 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	for entity_id in Global.get_all_entity_ids():
-		if cards_by_id.has(entity_id) || !entity_id.begins_with("card_"):
+		if cards_by_id.has(entity_id) || !entity_id.begins_with(deck_id + "_card_"):
 			continue
 
 		var type = Global.get_entity_state(entity_id, "type")
+		
 		var base_card: Card
 
 		for card in possible_cards:
@@ -56,10 +58,9 @@ func _process(_delta: float) -> void:
 
 
 func _on_dropped(_target: Node2D):
-
 	var random_card: Card = possible_cards[random.randi() % possible_cards.size()]
 	var card_instance = random_card.duplicate()
-	var card_id = "card_" + get_uuid()
+	var card_id = deck_id + "_card_" + get_uuid()
 
 	get_tree().root.add_child(card_instance)
 

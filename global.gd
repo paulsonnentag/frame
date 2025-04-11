@@ -22,3 +22,9 @@ func get_entity_state(entity_id, key: String) -> Variant:
 		return null
 
 	return _godot_project.get_entity_state(entity_id, key)
+
+func destroy_all_entities() -> void:
+	if (!_godot_project):
+		return
+
+	_godot_project.destroy_all_entities()

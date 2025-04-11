@@ -1,32 +1,75 @@
-[gd_scene load_steps=6 format=3 uid="uid://dpim420f7u1le"]
+[gd_scene load_steps=7 format=3 uid="uid://dpim420f7u1le"]
 
 [ext_resource type="PackedScene" uid="uid://bo7wdhbgsc1jy" path="res://cards/card.tscn" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://bac6lg7eycjc8" path="res://main.gd" id="1_lquwl"]
 [ext_resource type="PackedScene" uid="uid://c7baccmj133yn" path="res://cards/deck.tscn" id="1_ybtkh"]
 [ext_resource type="Texture2D" uid="uid://d3nlbc52sjvlm" path="res://assets/Clubs/6c.png" id="3_vw6iy"]
 [ext_resource type="Texture2D" uid="uid://vedgi5u7oc4g" path="res://assets/Diamonds/7d.png" id="5_tje20"]
+[ext_resource type="Texture2D" uid="uid://cnx2waskn0ugb" path="res://assets/special_card.png" id="6_7mycd"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_lquwl")
 metadata/patchwork_id = "527400742c7249eca34ef887573fbfa4"
 
-[node name="GodotProject" type="GodotProject" parent="."]
+[node name="Game" type="Node2D" parent="."]
 unique_name_in_owner = true
-metadata/patchwork_id = "70be2d325a27461fb2711bbfcb0fac28"
+metadata/patchwork_id = "4f21d899765542dca90418ebaafae6f4"
 
-[node name="Deck" parent="." instance=ExtResource("1_ybtkh")]
+[node name="ResetGameButton" type="Button" parent="Game"]
+unique_name_in_owner = true
+offset_left = 37.0
+offset_top = 28.0
+offset_right = 200.0
+offset_bottom = 78.0
+text = "Reset Game"
+metadata/patchwork_id = "9ed72caf1d284797b93a72b756a98d70"
+
+[node name="Deck" parent="Game" instance=ExtResource("1_ybtkh")]
 position = Vector2(250, 447)
+deck_id = "deck2"
 metadata/patchwork_id = "e5a22c22b2db4f2e81c0872e7e81fbd1"
 
-[node name="Card" parent="Deck" instance=ExtResource("1_ig7tw")]
+[node name="Card" parent="Game/Deck" instance=ExtResource("1_ig7tw")]
 position = Vector2(23, 192)
 is_revealed = true
 image = ExtResource("3_vw6iy")
 metadata/patchwork_id = "d4b59e66ea1a4d46b141b77e09be56b1"
 
-[node name="Card3" parent="Deck" instance=ExtResource("1_ig7tw")]
+[node name="Card3" parent="Game/Deck" instance=ExtResource("1_ig7tw")]
 position = Vector2(13, 389)
 is_revealed = true
 image = ExtResource("5_tje20")
 metadata/patchwork_id = "1d4d123ac01a456e9938f9658941ce61"
+
+[node name="Deck2" parent="Game" instance=ExtResource("1_ybtkh")]
+position = Vector2(889, 443)
+reveal_card_on_draw = false
+deck_id = "deck1"
+metadata/patchwork_id = "856560d7373e4208b275ab0f9749e9fc"
+
+[node name="Card" parent="Game/Deck2" instance=ExtResource("1_ig7tw")]
+position = Vector2(23, 192)
+is_revealed = true
+image = ExtResource("3_vw6iy")
+metadata/patchwork_id = "2596be82043b47f388fb5842e3b69cd3"
+
+[node name="Card3" parent="Game/Deck2" instance=ExtResource("1_ig7tw")]
+position = Vector2(13, 389)
+is_revealed = true
+image = ExtResource("6_7mycd")
+metadata/patchwork_id = "6382525827df4ef88c50ebdc35cd4740"
+
+[node name="GodotProject" type="GodotProject" parent="."]
+unique_name_in_owner = true
+metadata/patchwork_id = "70be2d325a27461fb2711bbfcb0fac28"
+
+[node name="LoadingLabel" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
+offset_left = 59.0
+offset_top = 39.0
+offset_right = 195.0
+offset_bottom = 85.0
+text = "connecting ...."
+metadata/patchwork_id = "f3056982e13f406babb333c2e4184ff7"
 
