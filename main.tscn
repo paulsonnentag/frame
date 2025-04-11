@@ -29,3 +29,4 @@ position = Vector2(13, 389)
 is_revealed = true
 image = ExtResource("5_tje20")
 metadata/patchwork_id = "1d4d123ac01a456e9938f9658941ce61"
+

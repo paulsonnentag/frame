@@ -26,3 +26,4 @@ unique_name_in_owner = true
 scale = Vector2(0.224437, 0.224437)
 texture = ExtResource("4_f61jr")
 metadata/patchwork_id = "b7ce377c3db143559648cec7c7a37390"
+
