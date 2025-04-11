@@ -1,24 +1,27 @@
 [gd_scene load_steps=4 format=3 uid="uid://c7baccmj133yn"]
 
 [ext_resource type="Texture2D" uid="uid://dnxic6f5xyxuw" path="res://assets/red.png" id="1_7reso"]
-[ext_resource type="Script" path="res://cards/deck.gd" id="1_sdmjd"]
-[ext_resource type="Script" path="res://dnd/draggable.gd" id="2_4xuf5"]
+[ext_resource type="Script" uid="uid://lhdxdxcm4io4" path="res://cards/deck.gd" id="1_sdmjd"]
+[ext_resource type="Script" uid="uid://o6n5n6l26nai" path="res://dnd/draggable.gd" id="2_4xuf5"]
 
 [node name="Deck" type="Node2D"]
 script = ExtResource("1_sdmjd")
+metadata/patchwork_id = "d2c69105c3b04b289cb748902715bc5b"
 
 [node name="BottomCard" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(1, 1.00002)
 scale = Vector2(0.224437, 0.224437)
 texture = ExtResource("1_7reso")
+metadata/patchwork_id = "f5da65328a214ad6b8f2259a5b423fd5"
 
 [node name="TopCard" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 scale = Vector2(0.224437, 0.224437)
 texture = ExtResource("1_7reso")
+metadata/patchwork_id = "e7bcf459958347e5aa88396f990eec55"
 
-[node name="Draggable" type="Node2D" parent="TopCard" node_paths=PackedStringArray("drag_handle")]
+[node name="Draggable" type="Node2D" parent="TopCard"]
 unique_name_in_owner = true
 script = ExtResource("2_4xuf5")
-drag_handle = NodePath("..")
+metadata/patchwork_id = "541f96b0fd9f4b5f8c51fa2ca8fae258"

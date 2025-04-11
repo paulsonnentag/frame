@@ -10,35 +10,36 @@ var is_hovered = false
 signal dropped(drop_target: Node2D);
 signal clicked();
 
-@export var drag_handle: Node
+var drag_handle: Node
 
 func _input(event: InputEvent) -> void:
-		if not event.position:
-				return
+	if !("position" in event):
+		return
+		
 
-		is_hovered = drag_handle.get_rect().has_point(drag_handle.to_local(event.position))
+	is_hovered = drag_handle.get_rect().has_point(drag_handle.to_local(event.position))
 
-		if Input.is_action_just_pressed("pointer") and is_hovered and currently_dragged == null:
-				currently_dragged = get_parent()
-				is_mouse_down = true
-				has_moved = false
-				return
+	if Input.is_action_just_pressed("pointer") and is_hovered and currently_dragged == null:
+			currently_dragged = get_parent()
+			is_mouse_down = true
+			has_moved = false
+			return
 
-		if currently_dragged != get_parent():
-				return
+	if currently_dragged != get_parent():
+			return
 
-		if Input.is_action_just_released("pointer") and is_mouse_down:
-				is_mouse_down = false
-				currently_dragged = null
-				if not has_moved:
-						clicked.emit()
-				else:
-						_on_drop(event.position)
-				return
+	if Input.is_action_just_released("pointer") and is_mouse_down:
+			is_mouse_down = false
+			currently_dragged = null
+			if not has_moved:
+					clicked.emit()
+			else:
+					_on_drop(event.position)
+			return
 
-		if is_mouse_down:
-				has_moved = true
-				_on_drag(event.position)
+	if is_mouse_down:
+			has_moved = true
+			_on_drag(event.position)
 
 func _on_drag(point: Vector2):
 		for target in DropTarget.all_drop_targets:

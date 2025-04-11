@@ -24,6 +24,7 @@ func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
 
+	draggable.drag_handle = face_sprite
 	draggable.dropped.connect(_on_dropped)
 	draggable.clicked.connect(_on_click)
 

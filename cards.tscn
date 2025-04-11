@@ -1,26 +1,37 @@
-[gd_scene load_steps=5 format=3 uid="uid://bs1vypw1irnms"]
+[gd_scene load_steps=6 format=3 uid="uid://bs1vypw1irnms"]
 
+[ext_resource type="Script" uid="uid://cgko33jjnh1yh" path="res://cards.gd" id="1_tvm60"]
 [ext_resource type="PackedScene" uid="uid://bo7wdhbgsc1jy" path="res://cards/card.tscn" id="2_tymxq"]
 [ext_resource type="Texture2D" uid="uid://d3nlbc52sjvlm" path="res://assets/Clubs/6c.png" id="3_wc75r"]
 [ext_resource type="Texture2D" uid="uid://cibeuqpybuyuh" path="res://assets/Hearts/11h.png" id="4_ffmrk"]
 [ext_resource type="Texture2D" uid="uid://vedgi5u7oc4g" path="res://assets/Diamonds/7d.png" id="5_cs8a0"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_tvm60")
+metadata/patchwork_id = "8aaa93a7408943e4a6b41c368f77d519"
+
+[node name="GodotProject" type="GodotProject" parent="."]
+unique_name_in_owner = true
+metadata/patchwork_id = "5340fbc6db2f4ae38336432978ba039c"
 
 [node name="Card" parent="." instance=ExtResource("2_tymxq")]
 position = Vector2(248, 622)
 entity_id = "card_1"
 is_revealed = true
 image = ExtResource("3_wc75r")
+metadata/patchwork_id = "d1ac10d17ef7425ab720003f5bac49fb"
 
 [node name="Card2" parent="." instance=ExtResource("2_tymxq")]
 position = Vector2(261, 786)
 entity_id = "card_2"
 is_revealed = true
 image = ExtResource("4_ffmrk")
+metadata/patchwork_id = "64bc92b3ff014733969c233a098059a6"
 
 [node name="Card3" parent="." instance=ExtResource("2_tymxq")]
 position = Vector2(264, 982)
 entity_id = "card_3"
 is_revealed = true
 image = ExtResource("5_cs8a0")
+metadata/patchwork_id = "ca0d527690ed43fab3521fffbaf4a18c"
+

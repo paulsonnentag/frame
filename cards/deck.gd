@@ -14,7 +14,7 @@ var possible_cards: Array[Card] = []
 var cards_by_id: Dictionary = {}
 
 func _ready() -> void:
-	print("deck ready")
+	draggable.drag_handle = top_card
 	draggable.dropped.connect(_on_dropped)
 
 	for child in get_children():

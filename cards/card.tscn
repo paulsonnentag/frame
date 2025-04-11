@@ -1,25 +1,28 @@
 [gd_scene load_steps=5 format=3 uid="uid://bo7wdhbgsc1jy"]
 
 [ext_resource type="Texture2D" uid="uid://deqsuds7jyydc" path="res://assets/card.png" id="1_44rt2"]
-[ext_resource type="Script" path="res://cards/card.gd" id="1_t4qkk"]
+[ext_resource type="Script" uid="uid://ba8rml2dxnxwx" path="res://cards/card.gd" id="1_t4qkk"]
 [ext_resource type="PackedScene" uid="uid://dk5i1hipqlpq0" path="res://dnd/Draggable.tscn" id="2_4sr8b"]
 [ext_resource type="Texture2D" uid="uid://dnxic6f5xyxuw" path="res://assets/red.png" id="4_f61jr"]
 
 [node name="Card" type="Node2D"]
 process_priority = 1
 script = ExtResource("1_t4qkk")
+metadata/patchwork_id = "bbd7eb09926348fd9efb66d95f9eff0a"
 
-[node name="Draggable" parent="." node_paths=PackedStringArray("drag_handle") instance=ExtResource("2_4sr8b")]
+[node name="Draggable" parent="." instance=ExtResource("2_4sr8b")]
 unique_name_in_owner = true
 z_as_relative = false
-drag_handle = NodePath("../FaceSprite")
+metadata/patchwork_id = "6fab5812214e4ffdb1fdc74e89521d91"
 
 [node name="FaceSprite" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 scale = Vector2(0.225375, 0.225375)
 texture = ExtResource("1_44rt2")
+metadata/patchwork_id = "3a2d94981cfc43e38e28b8fc6d227910"
 
 [node name="BackSprite" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 scale = Vector2(0.224437, 0.224437)
 texture = ExtResource("4_f61jr")
+metadata/patchwork_id = "b7ce377c3db143559648cec7c7a37390"

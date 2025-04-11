@@ -1,6 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://dk5i1hipqlpq0"]
 
-[ext_resource type="Script" path="res://dnd/draggable.gd" id="1_t10gc"]
+[ext_resource type="Script" uid="uid://o6n5n6l26nai" path="res://dnd/draggable.gd" id="1_t10gc"]
 
 [node name="Draggable" type="Node2D"]
 script = ExtResource("1_t10gc")
+metadata/patchwork_id = "2211c33019384a81a9ded94f9fb9dc99"
+
